@@ -4,6 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Map</title>
+    <!DOCTYPE html>
+
+    <!-- 後で消す！！ -->
+  <style>
+    /*popup template design*/
+    .popup-background{
+        /*position size*/
+        position: fixed;
+        z-index : 100;
+        top : 0;
+        left : 0;
+        height : 100vh;
+        width : 100vw;
+
+        /*design*/
+        background-color: gray;
+        opacity : 0.5
+    }
+    .popup{
+        /*position size*/
+        --height : 500px;
+        --width : 1000px;
+        z-index : 101;
+        position: fixed;
+        top : calc(50vh - calc(var(--height) / 2));
+        left : calc(50vw - calc(var(--width) / 2));
+        height : var(--height);
+        width : var(--width);
+
+        /*design*/
+        overflow: hidden;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 3px 1px gray;
+    }
+    .popup > .close-button{
+        /*position size*/
+        --size : 20px;
+        position:absolute;
+        top : calc(var(--size)/4);
+        left : calc(var(--width) - var(--size) * 5/4);/*css variables are available in children*/
+        height : var(--size);
+        width : var(--size);
+
+        /*design*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color : gray;
+        font-size: var(--size);
+        border-radius: calc(var(--size)/5);
+    }
+    .popup > .close-button:hover{
+        /*design*/
+        background-color: red;
+        color : white;
+    }
+    .popup > .content{
+        padding: 10px;
+        text-align: center;
+    }
+    
+
+    /*hide popup*/
+    .popup-flag{
+        display:none;
+    }
+    .popup-flag:not(:checked) + .popup-background{
+        display:none;
+    }
+    .popup-flag:not(:checked) + * + .popup{
+        display:none;
+    }
+
+
+
+
+  
+  </style>
 </head>
 <body>
     <!-- webサイトヘッダ－ -->
@@ -43,7 +123,49 @@
             <section id="map">
                 <h2>Map</h2>
                 <img src="images/map.png" alt="カフェマップ">
+                <!-- popupオープンボタン -->
+                 <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
 
+                <!--popup表示-->
+                <input type="checkbox" class="popup-flag" id="popupFlag1">
+                <label class="popup-background" for="popupFlag1"></label>
+                <div class="popup">
+                    <label class="close-button" for="popupFlag1">×</label>
+                    <div class="content">
+                        <!-- cssで背景画像挿入 -->
+                        <h1>cafe</h1>
+                        <h2>テキスト</h2>
+                        <figure>
+                            <img src="#" alt="カフェの画像">
+                            <figcaption>
+                                <h3>カフェ名</h3>
+                                <p>カフェの説明文が入ります。<br>
+                                    カフェの説明文が入ります。<br>
+                                    カフェの説明文が入ります。</p>
+                            </figcaption>
+                        </figure>
+                        <figure>
+                            <img src="#" alt="カフェの画像">
+                            <figcaption>
+                                <h3>URL</h3>
+                                <h4>Instagram</h4>
+                                <p>https://www.instagram.com/</p>
+                                <h4>Website</h4>
+                                <p>https://www.cafe.com/</p>
+                                <h4>Contact</h4>
+                                <p>https://www.google.com/maps</p>
+                                <p>mail@example.com</p>
+                                <p>
+                                    住所：東京都渋谷区〇〇〇〇<br>
+                                    電話番号：03-1234-5678
+                                </p>
+                                <p>営業時間：午前9時〜午後8時</p>
+                            </figcaption>
+
+                        </figure>
+                        
+                    </div>
+                </div>
             </section>
             <!-- タグ -->
             <section id="tag">
