@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Map</title>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example.com/index.html" 
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tags",
+        "item": "https://example.com/tags.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Chill"
+      }]
+    }
+    </script>
+</head>
+<body>
+    <!-- webサイトヘッダ－ -->
+    <header>
+        <nav id="head">
+            <!-- ヘッダーリンク -->
+            <ul>
+                <!-- ヘッダー装飾 -->
+                <img class="garland-left" src="images/garland.png" alt="装飾画像">
+                <img class="garland-right" src="images/garland.png" alt="装飾画像">
+                <li><a href="#">Tags<br class="header">タグから探す</a></li>
+                <li><a href="#">Map<br class="header">マップから探す</a></li>
+                <li><a href="#">Cafe Map</a></li>
+                <li><a href="#">About<br class="header">このサイトについて</a></li>
+                <li><a href="#">Contact<br class="header">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="breadcrumb">
+            <h1>Chill</h1>
+            <!-- パンくずリスト -->
+             <nav aria-label="breadcrumb">
+                <ol>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tags</a></li>
+                    <!-- 今開いているページ」を明確に示す役割 -->
+                    <li aria-current="page">Cozy</li>
+                </ol>
+             </nav>
+        </section>
+        <!-- カフェの概要ページ -->
+        <section id="main">
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Cafe Map. All rights reserved.</p>
+    </footer>
+</body>
+</html>
