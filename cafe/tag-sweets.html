@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Map</title>
+    <!-- 「パンくずリスト」をGoogleに正しく伝えるためのコード -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -21,7 +22,7 @@
       },{
         "@type": "ListItem",
         "position": 3,
-        "name": "Chill"
+        "name": "Sweets"
       }]
     }
     </script>
@@ -49,8 +50,8 @@
             <!-- パンくずリスト -->
              <nav aria-label="breadcrumb">
                 <ol>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Tags</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tag-alllist.html">Tags</a></li>
                     <!-- 今開いているページ」を明確に示す役割 -->
                     <li aria-current="page">Sweets</li>
                 </ol>

@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Map</title>
+        <!-- 「パンくずリスト」をGoogleに正しく伝えるためのコード -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://example.com/index.html" 
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tags",
+        "item": "https://example.com/tags.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "All List"
+      }]
+    }
+    </script>
+
 </head>
 <body>
     <!-- webサイトヘッダ－ -->
@@ -20,117 +43,163 @@
                 <li><a href="#">About<br class="header">このサイトについて</a></li>
                 <li><a href="#">Contact<br class="header">お問い合わせ</a></li>
             </ul>
-            <!-- jsで動かす見出し画像 -->
-            <img src="images/header1.jpg" alt="カフェマップサイトの見出し画像">
-            <p>Discover Your Next Favorite Cafe</p>
         </nav>
     </header>
     <main>
-        <div id="main">
-            <!-- 装飾画像 -->
-            <img class="strawberry" src="images/strawberry.png" alt="いちご装飾画像">
-            <img class="bird-left" src="images/bird.png" alt="鳥の装飾画像">
-            <!-- aboutページ -->
-            <section id="about">
-                <h1>About</h1>
-                <h2>カフェマップサイト</h2>
-                <img src="#" alt="サイトについての説明">
-                    <p>あなたの希望に合わせたカフェを紹介します✨</p>
-                    <p>マップから気になるカフェの紹介ページに飛べます。</p>
-            </section>
-            <!-- マップ -->
-            <section id="map">
-                <h2>Map</h2>
-                <img src="images/map.png" alt="カフェマップ">
-                <!-- popupオープンボタン -->
-                 <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
-
-                <!--popup表示-->
-                <input type="checkbox" class="popup-flag" id="popupFlag1">
-                <label class="popup-background" for="popupFlag1"></label>
-                <div class="popup">
-                    <label class="close-button" for="popupFlag1">×</label>
-                    <div class="content">
-                        <!-- cssで背景画像挿入 -->
-                        <h1>cafe</h1>
-                        <h2>テキスト</h2>
-                        <figure>
-                            <img src="#" alt="カフェの画像">
-                            <figcaption>
-                                <h3>カフェ名</h3>
-                                <p>カフェの説明文が入ります。<br>
-                                    カフェの説明文が入ります。<br>
-                                    カフェの説明文が入ります。</p>
-                            </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="#" alt="カフェの画像">
-                            <figcaption>
-                                <h3>URL</h3>
-                                <h4>Instagram</h4>
-                                <p>https://www.instagram.com/</p>
-                                <h4>Website</h4>
-                                <p>https://www.cafe.com/</p>
-                                <h4>Contact</h4>
-                                <p>https://www.google.com/maps</p>
-                                <p>mail@example.com</p>
-                                <p>
-                                    住所：東京都渋谷区〇〇〇〇<br>
-                                    電話番号：03-1234-5678
-                                </p>
-                                <p>営業時間：午前9時〜午後8時</p>
-                            </figcaption>
-
-                        </figure>
-                        
-                    </div>
-                </div>
-            </section>
-            <!-- タグ -->
-            <section id="tag">
-                <h1>Tags</h1>
-                <figure>>
-                    <img src="images/tag1.png" alt="スイーツ">
+        <section id="breadcrumb">
+            <h1>Chill</h1>
+            <!-- パンくずリスト -->
+             <nav aria-label="breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- 今開いているページ」を明確に示す役割 -->
+                    <li aria-current="page">All List</li>
+                </ol>
+             </nav>
+        </section>
+        <!-- カフェの概要ページ -->
+         <!-- sweetsタグ -->
+        <section id="sweets">
+            <figure>
+                <img src="#" alt="カフェの画像">
                     <figcaption>
-                        <h2 class="tags">Sweet Delights</h2>
-                        <p class="hd"><strong>おいしそうなスイーツたち</strong></p>
-                        <p class="brief">お店こだわりのスイーツを楽しむことができます</p>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
                     </figcaption>
-                </figure>
-                <h3><a href="#">#Sweets</a></h3>
-                <h3><a href="#">#Homemade</a></h3>
-
-                <figure>
-                    <img src="#" alt="カフェの外観">
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
                     <figcaption>
-                        <h2 class="tags">Aesthetic Moments</h2>
-                        <p class="hd"><strong>おしゃれなお店でインスタ映えを</strong></p>
-                        <p class="brief">インスタ映えするようなおしゃれな外観、内装です。<br>
-                            写真を通して、素敵な思い出を。</p>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
                     </figcaption>
-                </figure>
-                <h3><a href="#">#Chill</a></h3>
-                <h3><a href="#">#Cozy</a></h3>
-
-
-                <figure>
-                    <img src="images/tag3.png" alt="コーヒー">
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
                     <figcaption>
-                        <h2 class="tags">Elevate Your Caffeine</h2>
-                        <p class="hd"><strong>本格的なコーヒー</strong></p>
-                        <p class="brief">店主こだわりのコーヒーを味わうことができます。<br>
-                            家では味わえない本格的な味わいを。
-                        </p>
-
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
                     </figcaption>
-                </figure>
-                <h3><a href="#">#Coffee</a></h3>
-                <h3><a href="#">#Craft</a></h3>
-                
-                <h1>All List</h1>
-            </div>
+            </figure>
+        </section>
 
-        </div>
+        <!-- homemadeタグ -->
+        <section id="homemade">
+             <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+        </section>
+
+        <!-- chillタグ -->
+        <section id="chill">
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+        </section>
+
+        <!-- cozyタグ -->
+        <section id="cozy">
+             <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+        </section>
+
+        <!-- coffeeタグ -->
+        <section id="coffee">
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+        </section>
+
+        <!-- craftタグ -->
+        <section id="craft">
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+            <figure>
+                <img src="#" alt="カフェの画像">
+                    <figcaption>
+                        <time datetime="2026-01-01">2026/01/01</time>
+                        <h3>お店の名前</h3>
+                    </figcaption>
+            </figure>
+        </section>
     </main>
     <footer>
         <p>&copy; 2026 Cafe Map. All rights reserved.</p>
