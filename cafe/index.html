@@ -15,83 +15,6 @@
     <meta property="og:image" content="https://cafemap.work/images/ogp-image.png">
     <title>Cafe Map</title>
     <!-- 後で消す！！ -->
-  <style>
-    /*popup template design*/
-    .popup-background{
-        /*position size*/
-        position: fixed;
-        z-index : 100;
-        top : 0;
-        left : 0;
-        height : 100vh;
-        width : 100vw;
-
-        /*design*/
-        background-color: gray;
-        opacity : 0.5
-    }
-    .popup{
-        /*position size*/
-        --height : 500px;
-        --width : 1000px;
-        z-index : 101;
-        position: fixed;
-        top : calc(50vh - calc(var(--height) / 2));
-        left : calc(50vw - calc(var(--width) / 2));
-        height : var(--height);
-        width : var(--width);
-
-        /*design*/
-        overflow: hidden;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0px 0px 3px 1px gray;
-    }
-    .popup > .close-button{
-        /*position size*/
-        --size : 20px;
-        position:absolute;
-        top : calc(var(--size)/4);
-        left : calc(var(--width) - var(--size) * 5/4);/*css variables are available in children*/
-        height : var(--size);
-        width : var(--size);
-
-        /*design*/
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: transparent;
-        color : gray;
-        font-size: var(--size);
-        border-radius: calc(var(--size)/5);
-    }
-    .popup > .close-button:hover{
-        /*design*/
-        background-color: red;
-        color : white;
-    }
-    .popup > .content{
-        padding: 10px;
-        text-align: center;
-    }
-    
-
-    /*hide popup*/
-    .popup-flag{
-        display:none;
-    }
-    .popup-flag:not(:checked) + .popup-background{
-        display:none;
-    }
-    .popup-flag:not(:checked) + * + .popup{
-        display:none;
-    }
-
-
-
-
-  
-  </style>
 </head>
 <body>
     <!-- webサイトヘッダ－ -->
@@ -133,55 +56,56 @@
             
                     <!-- 1つ目のポップアップウィンドウ -->
                     <!-- popupオープンボタン -->
-                     <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
+                     <button type="button" class="pin-button" data-id="cafe1">
+                        <img src="images/duck.png" alt="カフェ１の詳細を見る">
+                    </button>
                     <!--popup表示-->
-                    <input type="checkbox" class="popup-flag" id="popupFlag1">
-                    <label class="popup-background" for="popupFlag1"></label>
-                    <div class="popup">
-                        <label class="close-button" for="popupFlag1">×</label>
-                        <div class="content">
-                            <!-- cssで背景画像挿入 -->
-                            <h1>cafe</h1>
-                            <h2>テキスト</h2>
-                            <figure>
-                                <img src="#" alt="カフェの画像">
-                                <figcaption>
-                                    <h3>カフェ名</h3>
-                                    <p>カフェの説明文が入ります。<br>
-                                        カフェの説明文が入ります。<br>
-                                        カフェの説明文が入ります。</p>
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img src="#" alt="カフェの画像">
-                                <figcaption>
-                                    <h3>URL</h3>
-                                    <h4>Instagram</h4>
-                                    <p>https://www.instagram.com/</p>
-                                    <h4>Website</h4>
-                                    <p>https://www.cafe.com/</p>
-                                    <h4>Contact</h4>
-                                    <p>https://www.google.com/maps</p>
-                                    <p>mail@example.com</p>
-                                    <p>
-                                        住所：東京都渋谷区〇〇〇〇<br>
-                                        電話番号：03-1234-5678
-                                    </p>
-                                    <p>営業時間：午前9時〜午後8時</p>
-                                </figcaption>
-                            </figure>
-            
-                        </div>
-                    </div>
+                    <dialog id="cafe1" class="popup">
+                            <button type="button" class="close-button" aria-label="閉じる">×</button>
+                            <div class="content">
+                                <!-- cssで背景画像挿入 -->
+                                <h1>cafe</h1>
+                                <h2>テキスト</h2>
+                                <figure>
+                                    <img src="#" alt="カフェの画像">
+                                    <figcaption>
+                                        <h3>カフェ名</h3>
+                                        <p>カフェの説明文が入ります。<br>
+                                            カフェの説明文が入ります。<br>
+                                            カフェの説明文が入ります。</p>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="#" alt="カフェの画像">
+                                    <figcaption>
+                                        <h3>URL</h3>
+                                        <h4>Instagram</h4>
+                                        <p>https://www.instagram.com/</p>
+                                        <h4>Website</h4>
+                                        <p>https://www.cafe.com/</p>
+                                        <h4>Contact</h4>
+                                        <p>https://www.google.com/maps</p>
+                                        <p>mail@example.com</p>
+                                        <p>
+                                            住所：東京都渋谷区〇〇〇〇<br>
+                                            電話番号：03-1234-5678
+                                        </p>
+                                        <p>営業時間：午前9時〜午後8時</p>
+                                    </figcaption>
+                                </figure>
+                                <!-- 戻るリンクを追加 -->
+                                <a href="tag-alllist.html" class="back-link">リストに戻る</a>
+                            </div>
+                    </dialog>
             
                     <!-- 2つ目 -->
                     <!-- popupオープンボタン -->
-                    <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
+                    <button type="button" class="pin-button" data-id="cafe2">
+                        <img src="images/duck.png" alt="カフェ２の詳細を見る">
+                    </button>
                     <!--popup表示-->
-                    <input type="checkbox" class="popup-flag" id="popupFlag1">
-                    <label class="popup-background" for="popupFlag1"></label>
-                    <div class="popup">
-                        <label class="close-button" for="popupFlag1">×</label>
+                    <dialog id="cafe2" class="popup">
+                        <button type="button" class="close-button" aria-label="閉じる">×</button>
                         <div class="content">
                             <!-- cssで背景画像挿入 -->
                             <h1>cafe</h1>
@@ -213,14 +137,19 @@
                                     <p>営業時間：午前9時〜午後8時</p>
                                 </figcaption>
                             </figure>
+                            <!-- 戻るリンクを追加 -->
+                            <a href="tag-alllist.html" class="back-link">リストに戻る</a>
+                        </div>
+                    </dialog>
+            
                     <!-- ３つ目 -->
                     <!-- popupオープンボタン -->
-                    <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
+                    <button type="button" class="pin-button" data-id="cafe3">
+                        <img src="images/duck.png" alt="カフェ３の詳細を見る">
+                    </button>
                     <!--popup表示-->
-                    <input type="checkbox" class="popup-flag" id="popupFlag1">
-                    <label class="popup-background" for="popupFlag1"></label>
-                    <div class="popup">
-                        <label class="close-button" for="popupFlag1">×</label>
+                    <dialog id="cafe3" class="popup">
+                        <button type="button" class="close-button" aria-label="閉じる">×</button>
                         <div class="content">
                             <!-- cssで背景画像挿入 -->
                             <h1>cafe</h1>
@@ -252,14 +181,19 @@
                                     <p>営業時間：午前9時〜午後8時</p>
                                 </figcaption>
                             </figure>
+                            <!-- 戻るリンクを追加 -->
+                            <a href="tag-alllist.html" class="back-link">リストに戻る</a>
+                        </div>
+                    </dialog>
+            
                     <!-- ４つ目 -->
                     <!-- popupオープンボタン -->
-                    <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
+                     <button type="button" class="pin-button" data-id="cafe4">
+                        <img src="images/duck.png" alt="カフェ４の詳細を見る">
+                    </button>
                     <!--popup表示-->
-                    <input type="checkbox" class="popup-flag" id="popupFlag1">
-                    <label class="popup-background" for="popupFlag1"></label>
-                    <div class="popup">
-                        <label class="close-button" for="popupFlag1">×</label>
+                    <dialog id="cafe4" class="popup">
+                        <button type="button" class="close-button" aria-label="閉じる">×</button>
                         <div class="content">
                             <!-- cssで背景画像挿入 -->
                             <h1>cafe</h1>
@@ -291,14 +225,19 @@
                                     <p>営業時間：午前9時〜午後8時</p>
                                 </figcaption>
                             </figure>
+                            <!-- 戻るリンクを追加 -->
+                            <a href="tag-alllist.html" class="back-link">リストに戻る</a>
+                        </div>
+                    </dialog>
+            
                     <!-- ５つ目 -->
                     <!-- popupオープンボタン -->
-                    <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
+                     <button type="button" class="pin-button" data-id="cafe5">
+                        <img src="images/duck.png" alt="カフェ５の詳細を見る">
+                    </button>
                     <!--popup表示-->
-                    <input type="checkbox" class="popup-flag" id="popupFlag1">
-                    <label class="popup-background" for="popupFlag1"></label>
-                    <div class="popup">
-                        <label class="close-button" for="popupFlag1">×</label>
+                    <dialog id="cafe5" class="popup">
+                        <button type="button" class="close-button" aria-label="閉じる">×</button>
                         <div class="content">
                             <!-- cssで背景画像挿入 -->
                             <h1>cafe</h1>
@@ -330,15 +269,20 @@
                                     <p>営業時間：午前9時〜午後8時</p>
                                 </figcaption>
                             </figure>
+                            <!-- 戻るリンクを追加 -->
+                            <a href="tag-alllist.html" class="back-link">リストに戻る</a>
+                        </div>
+                    </dialog>
+
+            
                     <!-- ６つ目 -->
                     <!-- popupオープンボタン -->
-                    <label for="popupFlag1"><img src="images/duck.png" alt="アヒルのピン画像"></label>
-            
+                     <button type="button" class="pin-button" data-id="cafe6">
+                        <img src="images/duck.png" alt="カフェ６の詳細を見る">
+                    </button>
                     <!--popup表示-->
-                    <input type="checkbox" class="popup-flag" id="popupFlag1">
-                    <label class="popup-background" for="popupFlag1"></label>
-                    <div class="popup">
-                        <label class="close-button" for="popupFlag1">×</label>
+                    <dialog id="cafe6" class="popup">
+                        <button type="button" class="close-button" aria-label="閉じる">×</button>
                         <div class="content">
                             <!-- cssで背景画像挿入 -->
                             <h1>cafe</h1>
@@ -370,11 +314,14 @@
                                     <p>営業時間：午前9時〜午後8時</p>
                                 </figcaption>
                             </figure>
+                            <!-- 戻るリンクを追加 -->
+                            <a href="tag-alllist.html" class="back-link">リストに戻る</a>
                         </div>
-                    </div>
-                    </section>
-                    <!-- タグ -->
-                    <section id="tag">
+                    </dialog>
+                    
+                </section>
+                <!-- タグ -->
+                <section id="tag">
                     <h1>Tags</h1>
                     <figure>>
                         <img src="images/tag1.png" alt="スイーツ">
@@ -412,10 +359,11 @@
             
                     <h1>All List</h1>
                 </section>
-        </div>
+            </div>
     </main>
     <footer>
         <p>&copy; 2026 Cafe Map. All rights reserved.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

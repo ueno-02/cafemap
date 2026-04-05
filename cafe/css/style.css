@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* 1. 背景スクロール禁止：ICS Media推奨の最新手法 */
+body:has(dialog[open]) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+     /* スクロールバー消失によるガタつきを防止 */
+}
+
+/* アヒルのボタン（ピン）から余計な四角い背景と枠を消す */
+.pin-button {
+    background: none;      /* 背景色を消去 */
+    border: none;          /* 枠線を消去 */
+    padding: 0;            /* 内余白を消去 */
+    cursor: pointer;       /* マウスカーソルを指の形に */
+    outline: none;         /* クリック時の青い枠線を消去 */
+}
+
+.pin-button img {
+    width: 100px;          /* 必要に応じてサイズ調整（現在は画像サイズ依存） */
+    display: block;
+}
+
+.pin-button:hover {
+    opacity: 0.8;          /* ホバー時に少し薄くして「押せる」ことを伝える */
+}
+
+/* 2. ポップアップ（dialog要素）の設計 */
+dialog.popup {
+    border: none;
+    padding: 0;
+    max-width: 800px;
+    width: 90%;
+    /* 
+       ブラウザが自動で中央配置するため、
+       top/left/transformなどは一切不要 
+    */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* UIコンサル視点：柔らかく深い影 */
+}
+
+/* 3. 背景（オーバーレイ）の設計 */
+dialog.popup::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px); /* 背後をぼかして視認性を向上 */
+}
+
+/* 4. 閉じるボタン：アクセシビリティを考慮 */
+.close-button {
+    position: sticky;
+    top: 15px;
+    left: calc(100% - 45px); /* 右上に配置 */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.close-button:hover {
+    background-color: #ff4d4d;
+    color: white;
+    border-color: #ff4d4d;
+}
+
+dialog.popup > .content {
+    padding: 30px;
+    text-align: center;
+}
+
+/* 「リストに戻る」ボタンのデザイン改善 */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f0f0f0; /* 控えめなグレー */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-1px); /* 押しやすさを視覚的にフィードバック */
+}
+
+.back-link::before {
+    content: "← "; /* 戻る記号を付与して直感的に */
+}
