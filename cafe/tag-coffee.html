@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Cafe Map</title>
     <!-- 「パンくずリスト」をGoogleに正しく伝えるためのコード -->
     <script type="application/ld+json">
@@ -60,32 +61,61 @@
             </section>
             <!-- カフェの概要ページ -->
             <section id="main">
-                <figure>
-                    <img src="#" alt="カフェの画像">
-                    <figcaption>
-                        <time datetime="2026-01-01">2026/01/01</time>
-                        <h3>お店の名前</h3>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="#" alt="カフェの画像">
-                    <figcaption>
-                        <time datetime="2026-01-01">2026/01/01</time>
-                        <h3>お店の名前</h3>
-                    </figcaption>
-                </figure>
-                <figure>
-                    <img src="#" alt="カフェの画像">
-                    <figcaption>
-                        <time datetime="2026-01-01">2026/01/01</time>
-                        <h3>お店の名前</h3>
-                    </figcaption>
-                </figure>
-            </section>
+                    <!-- popupオープンボタン -->
+                        <button type="button" class="pin-button" data-id="cafe4">
+                            <figure>
+                                <img src="#" alt="カフェ4の詳細を見る">
+                                <figcaption>
+                                    <time datetime="2026-01-01">2026/01/01</time>
+                                    <h3>お店の名前</h3>
+                                </figcaption>
+                            </figure>
+                        </button>
+                    
+                    <!--popup表示-->
+                    <dialog id="cafe4" class="popup">
+                            <button type="button" class="close-button" aria-label="閉じる">×</button>
+                            <div class="content">
+                                <!-- cssで背景画像挿入 -->
+                                <h1>cafe</h1>
+                                <h2>テキスト</h2>
+                                <figure>
+                                    <img src="#" alt="カフェの画像">
+                                    <figcaption>
+                                        <h3>カフェ名</h3>
+                                        <p>カフェの説明文が入ります。<br>
+                                            カフェの説明文が入ります。<br>
+                                            カフェの説明文が入ります。</p>
+                                    </figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="#" alt="カフェの画像">
+                                    <figcaption>
+                                        <h3>URL</h3>
+                                        <h4>Instagram</h4>
+                                        <p>https://www.instagram.com/</p>
+                                        <h4>Website</h4>
+                                        <p>https://www.cafe.com/</p>
+                                        <h4>Contact</h4>
+                                        <p>https://www.google.com/maps</p>
+                                        <p>mail@example.com</p>
+                                        <p>
+                                            住所：東京都渋谷区〇〇〇〇<br>
+                                            電話番号：03-1234-5678
+                                        </p>
+                                        <p>営業時間：午前9時〜午後8時</p>
+                                    </figcaption>
+                                </figure>
+                                <p><a href="tag-cozy.html">Cozy</a></p>
+                                <p><a href="tag-coffee.html">Coffee</a></p>
+                            </div>
+                    </dialog>            
+                </section>
         </div>
     </main>
     <footer>
         <p>&copy; 2026 Cafe Map. All rights reserved.</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
