@@ -27,15 +27,30 @@ body:has(dialog[open]) {
 
 /* 2. ポップアップ（dialog要素）の設計 */
 dialog.popup {
+
+    background-color: #fff; 
     border: none;
     padding: 0;
+
+    /* 背景画像 */
+    background-image: url('../images/back-ground.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* サイズ設定 */
     max-width: 800px;
     width: 90%;
+    aspect-ratio: 3 / 4;
+    
     /* 
        ブラウザが自動で中央配置するため、
        top/left/transformなどは一切不要 
     */
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15); /* UIコンサル視点：柔らかく深い影 */
+    /* UIコンサル視点：柔らかく深い影 */
+    /* box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);  */
+
+    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.3));
 }
 
 /* 3. 背景（オーバーレイ）の設計 */
