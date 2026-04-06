@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /* 1. 背景スクロール禁止：ICS Media推奨の最新手法 */
 body:has(dialog[open]) {
     overflow: hidden;
@@ -41,7 +42,7 @@ dialog.popup {
     /* サイズ設定 */
     max-width: 800px;
     width: 90%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: auto;
     
     /* 
        ブラウザが自動で中央配置するため、
@@ -109,4 +110,9 @@ dialog.popup > .content {
 
 .back-link::before {
     content: "← "; /* 戻る記号を付与して直感的に */
+}
+
+/* pc表示 */
+@media (min-width: 768px) {
+    
 }
