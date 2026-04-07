@@ -7,10 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- googleフォント -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=LINE+Seed+JP&family=Lobster&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=LINE+Seed+JP&family=Lobster&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
 
     <!-- メタディスクリプション　検索結果の説明文 -->
     <meta name="description" content="宮崎市内の素敵なカフェをマップとタグから簡単に探せるサイトです。あなたにぴったりの『落ち着く場所』が見つかります。">
@@ -25,35 +24,47 @@
 <body>
     <!-- webサイトヘッダ－ -->
     <header>
-        <nav id="head">
-            <!-- ヘッダーリンク -->
-            <ul>
-                <!-- ヘッダー装飾 -->
-                <img class="garland-left" src="images/garland.png" alt="装飾画像">
-                <img class="garland-right" src="images/garland.png" alt="装飾画像">
-                <li><a href="tag-alllist.html">Tags<br class="header">タグから探す</a></li>
-                <li><a href="index.html#map">Map<br class="header">マップから探す</a></li>
-                <li><a href="index.html">Cafe Map</a></li>
-                <li><a href="about.html">About<br class="header">このサイトについて</a></li>
-                <li><a href="contact.html">Contact<br class="header">お問い合わせ</a></li>
-            </ul>
-            <!-- jsで動かす見出し画像 -->
+        <div class="header-contents">
+            <div class="garland">
+                <img class="garland-left" src="images/garland-l.png" alt="装飾画像">
+                <img class="garland-right" src="images/garland-r.png" alt="装飾画像">
+            </div>
+            <nav id="head">
+                <!-- ヘッダーリンク -->
+            
+                <ul>
+                    <li><a href="tag-alllist.html"><span class="header-link">Tags</span><br><span class="header-link-sub">タグから探す</span></a></li>
+                    <li><a href="index.html#map"><span class="header-link">Map</span><br><span class="header-link-sub">マップから探す</span></a></li>
+                    <li><a href="index.html"><span class="header-link">Cafe Map</span></a></li>
+                    <li><a href="about.html"><span class="header-link">About</span><br><span class="header-link-sub">このサイトについて</span></a></li>
+                    <li><a href="contact.html"><span class="header-link">Contact</span><br><span class="header-link-sub">お問い合わせ</span></a></li>
+            
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- jsで動かす見出し画像 -->
+        <div class="js">
             <img src="images/header1.jpg" alt="カフェマップサイトの見出し画像">
-            <p>Discover Your Next Favorite Cafe</p>
-        </nav>
+            <p class="text" >Discover Your<br>Next Favorite Cafe</p>
+        </div>
+
     </header>
     <main>
         <div class="container">
                 <!-- 装飾画像 -->
+                <section id="about"></section>
                 <img class="strawberry" src="images/strawberry.png" alt="いちご装飾画像">
                 <img class="bird-left" src="images/bird.png" alt="鳥の装飾画像">
                 <!-- aboutページ -->
-                <section id="about">
-                    <h1>About</h1>
-                    <h2>カフェマップサイト</h2>
-                    <img src="#" alt="サイトについての説明">
-                        <p>あなたの希望に合わせたカフェを紹介します✨</p>
-                        <p>マップから気になるカフェの紹介ページに飛べます。</p>
+                
+                    <div class="about-content">
+                        <h1 class="about">About</h1>
+                        <h2>カフェマップサイト</h2>
+                        <img src="images/about.png" alt="サイトについての説明">
+                            <p>あなたの希望に合わせたカフェを紹介します✨</p>
+                            <p>マップから気になるカフェの紹介ページに飛べます。</p>
+                    </div>
                 </section>
                 <!-- マップ -->
                 <section id="map">
@@ -340,7 +351,7 @@
                 <!-- タグ -->
                 <section id="tag">
                     <h1>Tags</h1>
-                    <figure>>
+                    <figure>
                         <img src="images/tag1.png" alt="スイーツ">
                         <figcaption>
                             <h2 class="tags">Sweet Delights</h2>

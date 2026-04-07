@@ -1,5 +1,227 @@
 @charset "UTF-8";
 
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+    background-color: #bba798;
+    list-style: none;
+}
+
+/* googleフォント */
+.line-seed-jp-regular {
+  font-family: "LINE Seed JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dynalight-regular {
+  font-family: "Dynalight", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-serif-light {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inria-serif-regular {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-serif-bold {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inria-serif-light-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inria-serif-regular-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inria-serif-bold-italic {
+  font-family: "Inria Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+/* header要素 */
+header .header-contents {
+    position: relative;
+}
+#head ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ヘッダーリンク */
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+#head ul .header-link {
+    font-size: 1rem;
+    margin: 0 auto;
+    font-family: "Inria Serif", serif;
+}
+
+/* ヘッダーリンクの下の文 */
+#head ul .header-link-sub {
+    font-size: 0.5rem;
+    margin: 0 auto;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+
+}
+
+/* ガーランド装飾 */
+.garland img {
+    position: absolute;
+    top: 0;
+    width: 13%;
+    height: auto;
+    vertical-align: bottom;
+}
+.garland-left,.garland-right {
+    top: 0;
+    z-index: 5;
+}
+
+.garland-left {
+    left: 0;
+}
+
+.garland-right {
+    right: 0;
+}
+
+/* ヘッダー画像 */
+.js {
+    position: relative;
+}
+.js img {
+    width: 100%;
+    height: calc(100vh - 58px);
+    object-fit: cover;
+}
+.js .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+nav#head {
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+/* ヘッダー画像のテキスト */
+.text {
+    color: #fff;
+    font-family: "Dynalight", cursive;
+    font-size: 2rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ページの装飾画像 */
+.strawberry {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+}
+
+.bird-left {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* aboutページ *--->
+/* 見出しリボン */
+.about {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 1rem;
+    background-color: #BB675E;
+    color: #353535;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about::before,
+.about::after {
+    position: absolute;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    border-color: #BB675E transparent;
+    border-style: solid;
+    content: '';
+}
+
+.about::before {
+    left: -15px;
+    border-width: 25px 0px 25px 15px;
+}
+
+.about::after {
+    right: -15px;
+    border-width: 25px 15px 25px 0px;
+}
+
+/* aboutページの画像 */
+#about img {
+    width: 300px;
+    height: auto;
+    max-width: 100%;
+    text-align: center;
+}
+
+.about-content {
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;;
+}
 
 /* 1. 背景スクロール禁止：ICS Media推奨の最新手法 */
 body:has(dialog[open]) {
@@ -114,5 +336,8 @@ dialog.popup > .content {
 
 /* pc表示 */
 @media (min-width: 768px) {
-    
+    /* ヘッダーリンクホバー */
+    header a:hover {
+
+    }
 }
