@@ -177,39 +177,42 @@ nav#head {
 /* aboutページ *--->
 /* 見出しリボン */
 .about {
-    position: relative;
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 1rem;
-    background-color: #BB675E;
-    color: #353535;
-    font-size: 26px;
-    font-weight: bold;
-    text-align: center;
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 300px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0 30px;
+  font-size: 1.5rem;
+  background: #BB675E;
+  color: #FFF;
+  font-family: "Inria Serif", serif;;
 }
 
-.about::before,
-.about::after {
-    position: absolute;
-    top: 0;
-    width: 0px;
-    height: 0px;
-    border-color: #BB675E transparent;
-    border-style: solid;
-    content: '';
+.about::before, .about::after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
 }
 
 .about::before {
-    left: -15px;
-    border-width: 25px 0px 25px 15px;
+  top: 0;
+  left: 0;
+  border-width: 25px 0px 25px 15px;
+  border-color: transparent transparent transparent #bba798;
+  border-style: solid;
 }
 
 .about::after {
-    right: -15px;
-    border-width: 25px 15px 25px 0px;
+  top: 0;
+  right: 0;
+  border-width: 25px 15px 25px 0px;
+  border-color: transparent #bba798 transparent transparent;
+  border-style: solid;
 }
-
 /* aboutページの画像 */
 #about img {
     width: 300px;
