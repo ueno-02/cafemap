@@ -5,6 +5,8 @@ html {
     font-size: 100%;
     background-color: #bba798;
     list-style: none;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+
 }
 
 /* googleフォント */
@@ -20,8 +22,8 @@ html {
   font-style: normal;
 }
 
-.dynalight-regular {
-  font-family: "Dynalight", cursive;
+.pinyon-script-regular {
+  font-family: "Pinyon Script", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -95,16 +97,12 @@ header a {
 #head ul .header-link {
     font-size: 2rem;
     font-family: "Inria Serif", serif;
-    margin-left:  60px;
     text-align: center;
 }
 
 /* ヘッダーリンクの下の文 */
 #head ul .header-link-sub {
     font-size: 0.9rem;
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    margin-left: 25px;
-
 }
 
 /* ガーランド装飾 */
@@ -152,7 +150,7 @@ nav#head {
 /* ヘッダー画像のテキスト */
 .text {
     color: #fff;
-    font-family: "Dynalight", cursive;
+    font-family: "Pinyon Script", cursive;
     font-size: 2rem;
     left: 50%;
     top: 50%;
@@ -163,31 +161,37 @@ nav#head {
 /* いちご */
 .strawberry {
     position: absolute;
+    bottom: -100%;
 }
 
 /* 鳥 */
 .bird-left {
     position: absolute;
+    left: 85%;
+    bottom: -35%;
 }
 
 
 /* aboutページ *--->
 /* 見出しリボン */
-.about {
-  display: inline-block;
+    /* 文字  */
+.ribbon-header {
   position: relative;
+  display: block;
+  margin: 200px auto 50px;
   height: 50px;
   width: 300px;
+  min-width: 300px;
   line-height: 50px;
-  text-align: center;
   padding: 0 30px;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   background: #BB675E;
   color: #FFF;
-  font-family: "Inria Serif", serif;;
+  font-family: "Inria Serif", serif;
+  text-align: center;
 }
 
-.about::before, .about::after {
+.ribbon-header::before, .ribbon-header::after {
   position: absolute;
   content: '';
   width: 0px;
@@ -195,7 +199,7 @@ nav#head {
   z-index: 1;
 }
 
-.about::before {
+.ribbon-header::before {
   top: 0;
   left: 0;
   border-width: 25px 0px 25px 15px;
@@ -203,7 +207,7 @@ nav#head {
   border-style: solid;
 }
 
-.about::after {
+.ribbon-header::after {
   top: 0;
   right: 0;
   border-width: 25px 15px 25px 0px;
@@ -211,17 +215,211 @@ nav#head {
   border-style: solid;
 }
 /* aboutページの画像 */
-#about img {
-    width: 300px;
-    height: auto;
-    max-width: 100%;
-    text-align: center;
-}
+
 
 .about-content {
-    text-align: center;
-    font-family: "Zen Kaku Gothic New", sans-serif;;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
 }
+
+/* aboutテキスト */
+.about-h2 {
+    position: absolute;
+    bottom: 67%;
+    left: 43%;
+    font-size: 2rem;
+}
+
+/* もっとみる */
+.about-link {
+    position: absolute;
+    text-decoration: none;
+    bottom: 45%;
+    left: 44%;
+    margin: 1.5em 0;
+    padding: 0 5px;
+    width: 200px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #BB675E;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.about-link:before {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid #BB675E;
+  z-index: 0;
+}
+
+.about-p1 {
+    position: absolute;
+    bottom: 25%;
+    left: 37%;
+    font-size: 1.5rem;
+}
+
+.about-p2 {
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    font-size: 1.5rem;
+}
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* tag */
+
+.tag {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.tag-h1 {
+    position: relative;
+}
+.tagimage img {
+    position: absolute;
+    top: -190px;
+    right: -220px;
+}
+
+.tag-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  gap: 40px;
+}
+
+.tag-text .tag-text-left {
+    flex-direction: row-reverse;
+}
+
+.tag-img {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.tag-cap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: left;
+}
+
+.tag-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.tags {
+  position: relative;/*相対位置*/
+  padding-left: 1.5em;/*アイコン分のスペース*/
+  line-height: 1.4;/*行高*/
+  color: #3A281B;/*文字色*/
+  font-family: "Pinyon Script", cursive;
+  font-weight: 900;
+  font-size: 6rem;
+  margin: 0;
+  align-content: center;
+}
+
+.tags:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f1b0";/*アイコンのユニコード*/
+  font-weight: 900;
+  position: absolute;/*絶対位置*/
+  font-size: 1em;/*サイズ*/
+  left: 0;/*アイコンの位置*/
+  top: 0;/*アイコンの位置*/
+  color: #69594B; /*アイコン色*/
+}
+
+.hd {
+    font-size: 2rem;
+    font-weight: 800;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+    color: #3A281B;
+    margin: 0;
+    padding-top: 35px;
+}
+.hd:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #3A281B;
+  border-radius: 2px;
+}
+
+.brief {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-top: 30px;
+}
+
+
+.tag-h3 a{
+    position: absolute;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 18px;
+    background: #69594B;
+    padding: 0 30px;
+    margin-left: 50px;
+}
+
+.tag-h3 a::before {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.tag-h3 a::before {
+  top: -2px;
+  left: -2px;
+  border-width: 32px 0px 32px 15px;
+  border-color: transparent transparent transparent #bba798;
+  border-style: solid;
+}
+
+
 
 /* 1. 背景スクロール禁止：ICS Media推奨の最新手法 */
 body:has(dialog[open]) {

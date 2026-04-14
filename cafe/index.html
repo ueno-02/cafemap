@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- googleフォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=LINE+Seed+JP&family=Lobster&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=LINE+Seed+JP&family=Lobster&family=Pinyon+Script&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
     <!-- メタディスクリプション　検索結果の説明文 -->
     <meta name="description" content="宮崎市内の素敵なカフェをマップとタグから簡単に探せるサイトです。あなたにぴったりの『落ち着く場所』が見つかります。">
     
@@ -58,17 +58,20 @@
                 <!-- aboutページ -->
                 
                     <div class="about-content">
-                        <h1 class="about">About</h1>
-                        <h2>カフェマップサイト</h2>
+                        <h1 class="ribbon-header">About</h1>
+                        <h2 class="about-h2">カフェマップサイト</h2>
+                        <a class="about-link" href="about.html">もっと見る</a>
                         <img src="images/about.png" alt="サイトについての説明">
-                            <p>あなたの希望に合わせたカフェを紹介します✨</p>
-                            <p>マップから気になるカフェの紹介ページに飛べます。</p>
+                            <p class="about-p1">あなたの希望に合わせたカフェを紹介します✨</p>
+                            <p class="about-p2">マップのアヒルピンから気になるカフェの紹介ページに見ることができます。</p>
                     </div>
                 </section>
                 <!-- マップ -->
                 <section id="map">
-                    <h1>Map</h1>
-                    <img src="images/map.png" alt="カフェマップ">
+                    <div class="map">
+                        <h1 class="ribbon-header">Map</h1>
+                        <img src="images/map.png" alt="カフェマップ">
+                    </div>
             
                     <!-- 1つ目のポップアップウィンドウ -->
                     <!-- popupオープンボタン -->
@@ -349,42 +352,59 @@
                 </section>
                 <!-- タグ -->
                 <section id="tag">
-                    <h1>Tags</h1>
-                    <figure>
-                        <img src="images/tag1.png" alt="スイーツ">
-                        <figcaption>
-                            <h2 class="tags">Sweet Delights</h2>
-                            <p class="hd"><strong>おいしそうなスイーツたち</strong></p>
-                            <p class="brief">お店こだわりのスイーツを楽しむことができます</p>
-                        </figcaption>
-                    </figure>
-                    <h3><a href="tag-sweets.html">#Sweets</a></h3>
-                    <h3><a href="tag-homemade.html">#Homemade</a></h3>
-                    <figure>
-                        <img src="images/tag2.png" alt="カフェの外観">
-                        <figcaption>
-                            <h2 class="tags">Aesthetic Moments</h2>
-                            <p class="hd"><strong>おしゃれなお店でインスタ映えを</strong></p>
-                            <p class="brief">インスタ映えするようなおしゃれな外観、内装です。<br>
-                                写真を通して、素敵な思い出を。</p>
-                        </figcaption>
-                    </figure>
-                    <h3><a href="tag-chill.html">#Chill</a></h3>
-                    <h3><a href="tag-cozy.html">#Cozy</a></h3>
-                    <figure>
-                        <img src="images/tag3.png" alt="コーヒー">
-                        <figcaption>
-                            <h2 class="tags">Elevate Your Caffeine</h2>
-                            <p class="hd"><strong>本格的なコーヒー</strong></p>
-                            <p class="brief">店主こだわりのコーヒーを味わうことができます。<br>
-                                家では味わえない本格的な味わいを。
-                            </p>
-                        </figcaption>
-                    </figure>
-                    <h3><a href="tag-coffee.html">#Coffee</a></h3>
-                    <h3><a href="tag-craft.html">#Craft</a></h3>
-            
-                    <h1>All List</h1>
+                    <div class="tag">
+                        <div class="tag-h1">
+                            <div class="tagimage"><img src="images/strawberry2.png" alt="イチゴの装飾画像"></div>
+                            <h1 class="ribbon-header">Tags</h1>
+                        </div>
+                        <!-- 画像左、文字右 -->
+                        <div class="tag-text">
+                            <div class="tag-img"><img src="images/tag1.png" alt="スイーツ"></div>
+                            <div class="tag-cap">
+                                <h2 class="tags">Treats</h2>
+                                <p class="hd"><strong>おいしそうなスイーツたち</strong></p>
+                                <p class="brief">お店こだわりのスイーツを楽しむことができます</p>
+                                <div class="tag-content">
+                                    <h3 class="tag-h3"><a href="tag-sweets.html">#Sweets</a></h3>
+                                    <h3 class="tag-h3"><a href="tag-homemade.html">#Homemade</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 画像右、文字左 -->
+                        <div class="tag-text tag-text-left">
+                                    <div class="tag-cap">
+                                        <h2 class="tags">Visuals</h2>
+                                        <p class="hd"><strong>おしゃれなお店でインスタ映えを</strong></p>
+                                        <p class="brief">インスタ映えするようなおしゃれな外観、内装です。<br>
+                                            写真を通して、素敵な思い出を。</p>
+                                    
+                                        <div class="tag-content">
+                                            <h3 class="tag-h3"><a href="tag-chill.html">#Chill</a></h3>
+                                            <h3 class="tag-h3"><a href="tag-cozy.html">#Cozy</a></h3>
+                                        </div>
+                                    </div>
+                                <div class="tag-img">
+                                    <div class="tag-img"><img src="images/tag2.png" alt="カフェの外観"></div>
+                                </div>
+                        </div>
+                        <!-- 画像左、文字右 -->
+                        <div class="tag-text">
+                            <div class="tag-img"><img src="images/tag3.png" alt="コーヒー"></div>
+                            <div class="tag-cap">
+                                <h2 class="tags">Craft</h2>
+                                <p class="hd"><strong>本格的なコーヒー</strong></p>
+                                <p class="brief">店主こだわりのコーヒーを味わうことができます。<br>
+                                    家では味わえない本格的な味わいを。
+                                </p>
+                            
+                                <div class="tag-content">
+                                    <h3 class="tag-h3"><a href="tag-coffee.html">#Coffee</a></h3>
+                                    <h3 class="tag-h3"><a href="tag-craft.html">#Craft</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <h1><a href="tag-alllist.html">All List</a></h1>
+                    </div>
                 </section>
             </div>
     </main>
