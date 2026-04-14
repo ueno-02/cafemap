@@ -135,26 +135,22 @@ header a {
     height: calc(100vh - 58px);
     object-fit: cover;
 }
+/* ヘッダー画像のテキスト */
 .js .text {
     position: absolute;
-    top: 50%;
+    color: #fff;
+    font-family: "Pinyon Script", cursive;
+    font-size: 7rem;
     left: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
     text-align: center;
+    text-shadow: 2px 2px 4px gray;
 }
 nav#head {
     max-width: 470px;
     margin: 0 auto;
     padding: 0 10%;
-}
-/* ヘッダー画像のテキスト */
-.text {
-    color: #fff;
-    font-family: "Pinyon Script", cursive;
-    font-size: 2rem;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 /* ページの装飾画像 */
