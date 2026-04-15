@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- googleフォント -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +18,10 @@
     <meta property="og:description" content="マップとタグで探す、あなただけのカフェ時間。">
     <meta property="og:image" content="images/kawaiicafe.jpg">
     <title>宮崎市　人気カフェ探し　Cafe Map</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <!-- webサイトヘッダ－ -->
@@ -42,8 +45,7 @@
         </div>
         
         <!-- jsで動かす見出し画像 -->
-        <div class="js">
-            <img src="images/header1.jpg" alt="カフェマップサイトの見出し画像">
+        <div id="slider"class="js">
             <p class="text" >Discover Your<br>Next Favorite Cafe</p>
         </div>
 
@@ -69,7 +71,7 @@
                 <section id="map">
                     <div class="map">
                         <h1 class="ribbon-header">Map</h1>
-                        <iframe class="googlemap" src="https://www.google.com/maps/d/embed?mid=1CJfTZggKV4xMGuhP2Mmd6YInLTaK6yg&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                        <div class="map-wrapper"><iframe src="https://www.google.com/maps/d/embed?mid=1CJfTZggKV4xMGuhP2Mmd6YInLTaK6yg&ehbc=2E312F&noprof=1" width="640" height="480"></iframe></div>
                     </div>
             
                     <!-- 1つ目のポップアップウィンドウ -->
@@ -402,7 +404,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h1 class="ribbon-header"><a href="tag-alllist.html">All List</a></h1>
+                        <h1 class="all-list-link"><a href="tag-alllist.html">All List</a></h1>
                     </div>
                 </section>
             </div>
@@ -410,6 +412,9 @@
     <footer>
         <p>&copy; 2026 Cafe Map. All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!--自作のJS-->
     <script src="js/script.js"></script>
 </body>
 </html>

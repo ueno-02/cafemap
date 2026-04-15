@@ -9,6 +9,12 @@ html {
 
 }
 
+a:hover {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+ 
+
 /* googleフォント */
 .line-seed-jp-regular {
   font-family: "LINE Seed JP", sans-serif;
@@ -130,7 +136,10 @@ header a {
 .js {
     position: relative;
 }
-.js img {
+
+#slider {
+    width: 100%;
+    height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
     width: 100%;
     height: calc(100vh - 58px);
     object-fit: cover;
@@ -175,10 +184,10 @@ nav#head {
   position: relative;
   display: block;
   margin: 200px auto 50px;
-  height: 50px;
-  width: 300px;
+  height: 60px;
+  width: 600px;
   min-width: 300px;
-  line-height: 50px;
+  line-height: 60px;
   padding: 0 30px;
   font-size: 2.5rem;
   background: #BB675E;
@@ -198,7 +207,7 @@ nav#head {
 .ribbon-header::before {
   top: 0;
   left: 0;
-  border-width: 25px 0px 25px 15px;
+  border-width: 30px 0px 30px 15px;
   border-color: transparent transparent transparent #bba798;
   border-style: solid;
 }
@@ -206,9 +215,14 @@ nav#head {
 .ribbon-header::after {
   top: 0;
   right: 0;
-  border-width: 25px 15px 25px 0px;
+  border-width: 30px 15px 30px 0px;
   border-color: transparent #bba798 transparent transparent;
   border-style: solid;
+}
+
+.ribbon-header a {
+    text-decoration: none;
+    color: #FFF;
 }
 /* aboutページの画像 */
 
@@ -223,8 +237,9 @@ nav#head {
 /* aboutテキスト */
 .about-h2 {
     position: absolute;
-    bottom: 67%;
-    left: 43%;
+    bottom: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 2rem;
 }
 
@@ -246,6 +261,7 @@ nav#head {
     background: #BB675E;
     border-radius: 50%;
     box-sizing: border-box;
+    box-shadow: 0 5px 0 #9e5d56;
 }
 
 .about-link:before {
@@ -259,6 +275,7 @@ nav#head {
   z-index: 0;
 }
 
+/* abouテキスト */
 .about-p1 {
     position: absolute;
     left: 50%;
@@ -275,16 +292,36 @@ nav#head {
     text-align: center;
 }
 
+/* map */
 .map {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.googlemap {
-    width: 1000px;
-    height: 800px;
+/* googlemap */
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0000001a;
 }
+
+/* mapのiframeの設定 */
+.map-wrapper iframe {
+    width: 100%;
+    height: 770px;
+    position: absolute;
+    top: -70px;       /* 上に70pxずらす */
+    /* left: 0; */
+    border: none;
+}
+
 
 
 /* tag */
@@ -390,7 +427,7 @@ nav#head {
     padding-top: 30px;
 }
 
-
+/* tagのリンク */
 .tag-h3 a{
     position: absolute;
     text-decoration: none;
@@ -405,6 +442,7 @@ nav#head {
     background: #69594B;
     padding: 0 30px;
     margin-left: 50px;
+    box-shadow: 0 4px 0 #463b33;
 }
 
 .tag-h3 a::before {
@@ -423,7 +461,58 @@ nav#head {
   border-style: solid;
 }
 
+/* alllist */
+.all-list-link {
+  position: relative;
+  display: block;
+  margin: 200px auto 50px;
+  height: 60px;
+  width: 300px;
+  min-width: 300px;
+  line-height: 60px;
+  padding: 0 30px;
+  font-size: 2.5rem;
+  background: #BB675E;
+  color: #FFF;
+  font-family: "Inria Serif", serif;
+  text-align: center;
+  box-shadow: 0 5px 0 #9e5d56;
 
+}
+
+.all-list-link::before, .all-list-link::after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.all-list-link::before {
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent #bba798;
+  border-style: solid;
+}
+
+/* なぜか反映しない後で治す */
+.all-list-link:hover span {
+	background-color: #333;
+	color: #fff;
+	transform: translateY(4px);
+}
+
+/* alllistのatag */
+.all-list-link a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.all-list-link a:hover {
+  transform: translateY(5px);
+  box-shadow: none;
+}
 
 /* 1. 背景スクロール禁止：ICS Media推奨の最新手法 */
 body:has(dialog[open]) {
