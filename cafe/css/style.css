@@ -503,7 +503,7 @@ nav#head {
 }
 
 /* なぜか反映しない後で治す */
-.all-list-link:hover span {
+.all-list-link:hover {
 	background-color: #333;
 	color: #fff;
 	transform: translateY(4px);
