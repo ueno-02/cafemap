@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-/* 共通 */
 html {
     scroll-behavior: smooth;
     font-size: 100%;
@@ -9,12 +7,6 @@ html {
     list-style: none;
     font-family: "Zen Kaku Gothic New", sans-serif;
 }
-
-img {
-    height: auto;
-    vertical-align: bottom;
-}
-
 
 a:hover {
   transform: translateY(4px);
@@ -100,6 +92,12 @@ header .header-contents {
     text-align: center;
 }
 
+/* 共通 */
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
 
 /* ヘッダーリンク */
 header a {
@@ -331,7 +329,9 @@ nav#head {
 }
 
 
+
 /* tag */
+
 .tag {
   max-width: 1500px;
   margin: 0 auto;
@@ -341,7 +341,6 @@ nav#head {
 .tag-h1 {
     position: relative;
 }
-
 .tagimage img {
     position: absolute;
     top: -190px;
@@ -484,6 +483,7 @@ nav#head {
   font-family: "Inria Serif", serif;
   text-align: center;
   box-shadow: 0 5px 0 #9e5d56;
+
 }
 
 .all-list-link::before, .all-list-link::after {
@@ -631,7 +631,7 @@ dialog.popup > .content {
     content: "← "; /* 戻る記号を付与して直感的に */
 }
 
-/* スマホ表示 */
+/* pc表示 */
 @media (min-width: 768px) {
     /* ヘッダーリンクホバー */
     header a:hover {

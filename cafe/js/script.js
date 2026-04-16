@@ -29,13 +29,13 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 			var responsiveImage = [//PC用の画像
 				{ src: 'images/header1.jpg'},
 				{ src: 'images/header2.jpg'},
-				// { src: 'images/header3.jpg'}
+				{ src: 'images/header3.jpg'}
 			];
 		} else {
 			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
 				{ src: 'images/header1.jpg' },
 				{ src: 'images/header2.jpg' },
-				// { src: 'images/header3.jpg' }
+				{ src: 'images/header3.jpg' }
 			];
 		}
 
