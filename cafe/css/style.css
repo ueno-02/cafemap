@@ -8,6 +8,7 @@ html {
     background-color: #bba798;
     list-style: none;
     font-family: "Zen Kaku Gothic New", sans-serif;
+    color: #3A281B;
 }
 
 img {
@@ -27,6 +28,7 @@ footer {
     background-color: #463b33;
     color: #fff;
 }
+
 
 /* ふわっとスライド */
 .fadeUpTrigger{
@@ -231,6 +233,8 @@ nav#head {
     padding: 0 10%;
 }
 
+/* ----indexページ---- */
+
 /* ページの装飾画像 */
 /* いちご */
 .strawberry {
@@ -293,6 +297,16 @@ nav#head {
     text-decoration: none;
     color: #FFF;
 }
+
+/* aboutページリボンヘッダー　少し要素を変えるため */
+#ab-content .ribbon-header, #ab-process .ribbon-header{
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 1.5rem;
+  margin: 100px auto 50px;
+  border-color: transparent #e2d3c1 transparent transparent;
+
+}
+
 /* aboutページの画像 */
 
 
@@ -636,6 +650,166 @@ nav#head {
 
   opacity: 0;
   translate: 0 13%;
+}
+
+
+/* ----aboutページ---- */
+#main-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+/*=============
+.bg_pattern
+==============*/
+
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #fff; */
+  opacity: 0.4;
+  z-index: -1;
+}
+.Polka_v2 {
+  background-image:  radial-gradient(#bba798 2px, transparent 2px), radial-gradient(#bba798 2px, #fff 2px);
+  background-size: 40px 40px;
+  background-position: 0 0,20px 20px;
+}
+/* 図形の親要素 */
+.custom-shape {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 1600px;          /* 必要に応じて制限 */
+  background-color: #e2d3c1;
+  margin: 100px auto;         /* ★重要：半円が飛び出すための余白 */
+  align-items: center;
+}
+
+/* 上部の半円部分（擬似要素） */
+.custom-shape::before {
+  content: "";
+  position: absolute;
+  top: -80px;               /* 半円の高さ分だけ上に持ち上げる */
+  left: 50%;
+  transform: translateX(-50%); /* 真ん中に配置 */
+  
+  /* 半円のサイズ */
+  width: 800px;
+  height: 400px;
+  background-color: #e2d3c1;
+  /* 角丸で半円を作る：上側だけを丸める */
+  border-radius: 800px 800px 0 0; 
+  
+  z-index: -1;              /* 本体と一体化させる */
+}
+/* aboutコンテンツ */
+.about-text-head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* ほかのページにも効いている */
+.page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Inria Serif", serif;
+  margin-bottom: 50px;
+}
+
+.page-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* aboutコンテンツ */
+.about-fig {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* 各ページのコンテンツを中央揃え */
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 丸の図形 */
+.about-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(187, 103, 94,0.3);
+  border: 5px dotted #BB675E;
+  width: 200px;
+  height: 200px;
+}
+
+/* リボンの上書き */
+#ab-process .tag-h3 {
+  margin: 50px auto;
+  padding-bottom: 100px;
+}
+
+/* パンくずリスト */
+.breadcrumb {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.breadcrumb li {
+  display: inline;/*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;/*太字*/
+}
+
+.breadcrumb li:after {/* >を表示*/
+  content: '>';
+  padding: 0 0.2em;
+  color: #555;
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: #3A281B;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+/* 上書き */
+.all-page-content .page-subtitle {
+  margin: 20px auto;
+  font-family: "Inria Serif", serif;
+}
+
+.all-page-content .page-description {
+  margin: 0 auto;
 }
 
 /* 1. 背景スクロール禁止：ICS Media推奨の最新手法 */

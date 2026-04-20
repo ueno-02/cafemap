@@ -54,29 +54,41 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="page-content custom-shape all-page-content">
             <section id="breadcrumb">
-                <h1>All List</h1>
+                <h1 class="page-title">All List</h1>
                 <!-- パンくずリスト -->
-                <nav aria-label="breadcrumb">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <!-- 今開いているページ」を明確に示す役割 -->
-                        <li aria-current="page">All List</li>
+                <nav aria-label="breadcrumb" class="breadcrumb">
+                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <!-- 1つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="index.html">
+                                <span itemprop="name">ホーム</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <!-- 2つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="tag-alllist.html">
+                                <span itemprop="name">All List</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
                     </ol>
                 </nav>
             </section>
             <!-- カフェの概要ページ -->
             <!-- sweetsタグ -->
             <section id="sweets">
-                <h1>Sweets</h1>
+                <div class="bg_pattern Polka_v2"></div>
+                <h1 class="page-subtitle">Sweets</h1>
                     <!-- popupオープンボタン -->
                         <button type="button" class="pin-button" data-id="cafe1">
                             <figure>
                                 <img src="#" alt="カフェ１の詳細を見る">
                                 <figcaption>
                                     <time datetime="2026-01-01">2026/01/01</time>
-                                    <h3>お店の名前</h3>
+                                    <h3 class="page-description">お店の名前</h3>
                                 </figcaption>
                             </figure>
                         </button>
@@ -124,14 +136,14 @@
     
             <!-- homemadeタグ -->
             <section id="homemade">
-                <h1>Homemade</h1>
+                <h1 class="page-subtitle">Homemade</h1>
                     <!-- popupオープンボタン -->
                         <button type="button" class="pin-button" data-id="cafe2">
                             <figure>
                                 <img src="#" alt="カフェ２の詳細を見る">
                                 <figcaption>
                                     <time datetime="2026-01-01">2026/01/01</time>
-                                    <h3>お店の名前</h3>
+                                    <h3 class="page-description">お店の名前</h3>
                                 </figcaption>
                             </figure>
                         </button>
@@ -178,14 +190,14 @@
     
             <!-- chillタグ -->
             <section id="chill">
-                <h1>Chill</h1>
+                <h1 class="page-subtitle">Chill</h1>
                     <!-- popupオープンボタン -->
                         <button type="button" class="pin-button" data-id="cafe3">
                             <figure>
                                 <img src="#" alt="カフェ3の詳細を見る">
                                 <figcaption>
                                     <time datetime="2026-01-01">2026/01/01</time>
-                                    <h3>お店の名前</h3>
+                                    <h3 class="page-description">お店の名前</h3>
                                 </figcaption>
                             </figure>
                         </button>
@@ -233,14 +245,14 @@
     
             <!-- cozyタグ -->
             <section id="cozy">
-                <h1>Cozy</h1>
+                <h1 class="page-subtitle">Cozy</h1>
                     <!-- popupオープンボタン -->
                         <button type="button" class="pin-button" data-id="cafe4">
                             <figure>
                                 <img src="#" alt="カフェ４の詳細を見る">
                                 <figcaption>
                                     <time datetime="2026-01-01">2026/01/01</time>
-                                    <h3>お店の名前</h3>
+                                    <h3 class="page-description">お店の名前</h3>
                                 </figcaption>
                             </figure>
                         </button>
@@ -291,7 +303,7 @@
                                 <img src="#" alt="カフェ5の詳細を見る">
                                 <figcaption>
                                     <time datetime="2026-01-01">2026/01/01</time>
-                                    <h3>お店の名前</h3>
+                                    <h3 class="page-description">お店の名前</h3>
                                 </figcaption>
                             </figure>
                         </button>
@@ -338,14 +350,14 @@
     
             <!-- coffeeタグ -->
             <section id="coffee">
-                <h1>Coffee</h1>
+                <h1 class="page-subtitle">Coffee</h1>
                     <!-- popupオープンボタン -->
                         <button type="button" class="pin-button" data-id="cafe4">
                             <figure>
                                 <img src="#" alt="カフェ4の詳細を見る">
                                 <figcaption>
                                     <time datetime="2026-01-01">2026/01/01</time>
-                                    <h3>お店の名前</h3>
+                                    <h3 class="page-description">お店の名前</h3>
                                 </figcaption>
                             </figure>
                         </button>
@@ -392,14 +404,14 @@
     
             <!-- craftタグ -->
             <section id="craft">
-                <h1>Craft</h1>
+                <h1 class="page-subtitle">Craft</h1>
                     <!-- popupオープンボタン -->
                         <button type="button" class="pin-button" data-id="cafe6">
                             <figure>
                                 <img src="#" alt="カフェ6の詳細を見る">
                                 <figcaption>
                                     <time datetime="2026-01-01">2026/01/01</time>
-                                    <h3>お店の名前</h3>
+                                    <h3 class="page-description">お店の名前</h3>
                                 </figcaption>
                             </figure>
                         </button>
