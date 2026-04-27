@@ -53,16 +53,33 @@
     <main>
         <div class="container">
             <section id="breadcrumb">
-                <h1>Homemade</h1>
+                <h1 class="page-title">Chill</h1>
                 <!-- パンくずリスト -->
-                 <nav aria-label="breadcrumb">
-                    <ol>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="tag-alllist.html">Tags</a></li>
-                        <!-- 今開いているページ」を明確に示す役割 -->
-                        <li aria-current="page">Homemade</li>
+                <nav aria-label="breadcrumb" class="breadcrumb">
+                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <!-- 1つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="index.html">
+                                <span itemprop="name">ホーム</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <!-- 2つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="tag-alllist.html">
+                                <span itemprop="name">All List</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <!-- 3つめ -->
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="tag-chill.html">
+                                <span itemprop="name">Chill</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
                     </ol>
-                 </nav>
+                </nav>
             </section>
             <!-- カフェの概要ページ -->
             <section id="main">
